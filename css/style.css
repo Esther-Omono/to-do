@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* ============ CSS Reset ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ============ Variables ============ */
+:root {
+    --primary: rgb(93, 207, 93);
+    --secondary: rgb(235, 244, 235);
+    --accent: rgb(233, 141, 119);
+    --black: #000000;
+    --white: #ffffff;
+    --box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* ============  ============ */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--secondary);
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    /*background-color: var(--white);*/
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.inputButton {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 70%;
+    height: 50px;
+    padding: 8px;
+    margin: 0 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="text"]:focus {
+    outline: 5px solid var(--primary);
+    outline-offset: 5px;
+}
+
+input[type="text"]::placeholder {
+    font-size: 16px;
+}
+
+.addTask {
+    padding: 10px 15px;
+    height: 50px;
+    width: 50px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.addTask:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+ul {
+    margin: 25px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border: 5px solid var(--white);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.edit-btn {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: -80px;
+}
+
+.edit-btn:hover {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.custom-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-checkbox:checked {
+    background-color: var(--primary);
+}
+
+.custom-checkbox:checked::before {
+    content: '\2713';
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 18px;
+}
+
+.custom-checkbox:hover {
+    border-color: var(--white);
+}
+
+.custom-checkbox:checked:hover {
+    background-color: var(--primary);
+}
+
+.delete-btn {
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 10px 15px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: red;
+}
+
+.edit-btn, .delete-btn {
+    margin-right: 5px;
+}
+
+.task-text {
+    flex-grow: 1;
+    word-wrap: break-word;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+#editTaskInput {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#saveEditBtn {
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .custom-checkbox {
+        width: 18px;
+        height: 18px;
+    }
+
+    .custom-checkbox:checked::before {
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        margin: 40px;
+    }
+
+    .custom-checkbox {
+        width: 16px;
+        height: 16px;
+    }
+
+    .custom-checkbox:checked::before {
+        line-height: 14px;
+    }
+
+    .task-text {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

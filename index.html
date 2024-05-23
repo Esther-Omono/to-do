@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do App</h1>
+
+      <div class="inputButton">
+        <input type="text" id="taskInput" placeholder="Add a New Task" />
+        <button class="fa fa-plus addTask" onclick="addTask()"></button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+        <h2>Edit Task</h2>
+        <input
+          type="text"
+          id="editTaskInput"
+          placeholder="Enter new task text"
+        />
+        <button id="saveEditBtn">Save</button>
+      </div>
+    </div>
+
+    <!-- Javascript Files -->
+    <script
+      src="https://kit.fontawesome.com/7b2a14adfa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
