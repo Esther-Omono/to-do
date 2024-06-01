@@ -49,6 +49,7 @@ To run this project, you only need a web browser.
 ## File Structure
 
 to-do/
+
 ├── css/style.css
 
 ├── js/main.js
