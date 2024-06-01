@@ -34,7 +34,7 @@ To run this project, you only need a web browser.
 2. Navigate to the project directory:
 
    ```bash
-   cd responsive-todo-app
+   cd to-do
    ```
 
 3. Open `index.html` in your web browser.
@@ -50,8 +50,11 @@ To run this project, you only need a web browser.
 
 to-do/
 ├── css/style.css
+
 ├── js/main.js
+
 ├── index.html
+
 └── README.md
 
 ### `index.html`
