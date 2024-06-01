@@ -48,21 +48,19 @@ To run this project, you only need a web browser.
 
 ## File Structure
 
+```bash
 to-do/
-
 ├── css/style.css
-
 ├── js/main.js
-
 ├── index.html
-
 └── README.md
+```
 
 ### `index.html`
 
 The main HTML file containing the structure of the to-do app.
 
-### `styles.css`
+### `style.css`
 
 The CSS file containing styles for the to-do app, including responsive design rules.
 
