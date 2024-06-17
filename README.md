@@ -2,6 +2,10 @@
 
 A simple and responsive to-do list application built with HTML, CSS and JavaScript. This app allows users to add, edit, delete, and mark tasks as completed. It also includes a modal for editing tasks and uses Font Awesome for icons.
 
+## Demo
+
+Check out the live demo of this Responsive To-Do App [here](https://to-do-lime-eight.vercel.app/).
+
 ## Features
 
 - **Add Task**: Users can add a new task to the list.
