@@ -1,11 +1,25 @@
 let tasks = [];
 
+// Load tasks from localStorage on page load
+window.onload = function () {
+    const savedTasks = localStorage.getItem('tasks');
+    if (savedTasks) {
+        tasks = JSON.parse(savedTasks);
+        renderTasks();
+    }
+};
+
+function saveTasksToLocalStorage() {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
 function addTask() {
     const taskInput = document.getElementById('taskInput');
     const taskText = taskInput.value.trim();
 
     if (taskText !== '') {
         tasks.push({ text: taskText, completed: false });
+        saveTasksToLocalStorage();
         renderTasks();
         taskInput.value = '';
     }
@@ -13,17 +27,20 @@ function addTask() {
 
 function toggleTask(index) {
     tasks[index].completed = !tasks[index].completed;
+    saveTasksToLocalStorage();
     renderTasks();
 }
 
 function deleteTask(index) {
     tasks.splice(index, 1);
+    saveTasksToLocalStorage();
     renderTasks();
 }
 
 function openEditModal(index) {
     const editTaskInput = document.getElementById('editTaskInput');
     editTaskInput.value = tasks[index].text;
+
     const modal = document.getElementById('editModal');
     modal.style.display = 'block';
     const saveEditBtn = document.getElementById('saveEditBtn');
@@ -32,6 +49,7 @@ function openEditModal(index) {
         const newTaskText = editTaskInput.value.trim();
         if (newTaskText !== '') {
             tasks[index].text = newTaskText;
+            saveTasksToLocalStorage();
             renderTasks();
             modal.style.display = 'none';
         } else {
