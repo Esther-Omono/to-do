@@ -1,6 +1,6 @@
 # Responsive To-Do App
 
-A simple and responsive to-do list application built with HTML, CSS and JavaScript. This app allows users to add, edit, delete, and mark tasks as completed. It also includes a modal for editing tasks and uses Font Awesome for icons.
+A simple and responsive to-do list application built with HTML, CSS and JavaScript. This app allows users to add, edit, delete, and mark tasks as completed. It also includes a modal for editing tasks, uses Font Awesome for icons, and saves tasks to localStorage so they persist even after a page reloads.
 
 ## Demo
 
@@ -12,6 +12,7 @@ Check out the live demo of this Responsive To-Do App [here](https://to-do-lime-e
 - **Edit Task**: Users can edit an existing task using a modal popup.
 - **Delete Task**: Users can delete a task from the list.
 - **Mark as Completed**: Users can mark a task as completed.
+- **LocalStorage Integration**: Tasks are saved to localStorage and will persist across page reloads.
 - **Responsive Design**: The app is responsive and works well on different screen sizes.
 
 ## Technologies Used
@@ -32,7 +33,7 @@ To run this project, you only need a web browser.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/to-do.git
+   git clone https://github.com/Esther-Omono/to-do.git
    ```
 
 2. Navigate to the project directory:
@@ -49,6 +50,7 @@ To run this project, you only need a web browser.
 2. **Edit a Task**: Click the edit icon next to a task to open the edit modal, modify the task text, and click "Save" to update the task.
 3. **Delete a Task**: Click the delete icon next to a task to remove it from the list.
 4. **Mark as Completed**: Click the checkbox next to a task to mark it as completed.
+5. **Persistence with LocalStorage**: Tasks are saved in localStorage and will persist across page reloads. When you reload the page, your tasks will be restored automatically.
 
 ## File Structure
 
@@ -70,7 +72,7 @@ The CSS file containing styles for the to-do app, including responsive design ru
 
 ### `main.js`
 
-The JavaScript file containing the logic for adding, editing, deleting, and marking tasks as completed.
+The JavaScript file containing the logic for adding, editing, deleting, and marking tasks as completed, and handling localStorage to persist tasks.
 
 ## Customization
 
